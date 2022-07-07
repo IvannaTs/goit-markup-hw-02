@@ -1,0 +1,454 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+* {
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+hr,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  font-family: 'Roboto', 'Inter', 'Noto Sans','Raleway';
+  font-style: normal;
+  color: var(--v-darkGrey);
+  letter-spacing: 0.03em;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+/* all divs are relative by default*/
+div {
+  position: relative;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  /* display: block; */
+}
+
+/* Natural flow and rhythm in articles by default */
+article>*+* {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  padding: 0;
+  font: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+ul,
+ol {
+  -webkit-margin-before: 0 !important;
+  margin-block-start: 0 !important;
+  -webkit-margin-after: 0 !important;
+  margin-block-end: 0 !important;
+  -webkit-padding-start: 0 !important;
+  padding-inline-start: 0 !important;
+}
+
+
+:root {
+  --v-white: #FFFFFF;
+  --v-black: #000;
+  --v-blue: #2196F3;
+  --v-darkGrey: #212121;
+  --v-grey: #2F303A;
+  --v-lightGrey: #757575;
+  --v-current: #F5F4FA;
+  --v-current-color-light: #EEEEEE;
+}
+
+/******** CONTAINER SETTING *********/
+section {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.inner-flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.inner {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+/******** TEXT *********/
+h1 {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--v-darkGrey);
+  padding-bottom: 50px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.06em;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+p {
+  font-size: 14px;
+  line-height: 150%;
+}
+
+/******** NAVIGATION *********/
+.header {
+  background: var(--v-white);
+  border: 1px solid var(--v-current-color-light);
+}
+
+.nav {
+  height: 80px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.navbar-brand {
+  margin-right: 93px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 120%;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--v-blue);
+}
+
+.navbar-brand span {
+  color: var(--v-darkGrey);
+}
+
+.navbar-nav .nav-item {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: all linear .3s;
+}
+
+.navbar-list .nav-link {
+  color: var(--v-darkGrey);
+}
+
+.navbar-contacts .nav-link {
+  color: var(--v-lightGrey);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: var(--v-blue);
+}
+
+/******** INTRO *********/
+.intro {
+  padding: 200px 0;
+  background: var(--v-grey);
+}
+
+.intro-title__text {
+  color: var(--v-white);
+  text-transform: uppercase;
+}
+
+.intro-button {
+  padding-top: 30px;
+}
+
+.intro-button .btn {
+  font-weight: 700;
+  display: block;
+  margin: auto;
+  background: var(--v-blue);
+  color: var(--v-white);
+
+  width: 200px;
+  height: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.intro-button .btn:hover {
+  border: 2px solid var(--v-blue);
+  background: transparent;
+}
+
+.btn {
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all linear .3s;
+}
+
+.features {
+  padding: 94px 0;
+  background: var(--v-white);
+}
+
+.feature-box {
+  width: 270px;
+}
+
+.feature-title {
+  text-transform: uppercase;
+  color: var(--v-darkGrey);
+}
+
+.feature-text {
+  padding-top: 10px;
+  color: var(--v-lightGrey);
+}
+
+/******** WHAT WE DO *********/
+.whatWeDo {
+  background-color: var(--v-white);
+  padding-bottom: 94px;
+}
+
+img.whatWeDo-decor,
+img.project-picture__inner {
+  width: 370px;
+  height: 294px;
+  object-fit: cover;
+}
+
+/******** TEAM *********/
+.team {
+  padding: 94px 0;
+  background-color: var(--v-current);
+}
+
+.team-card {
+  width: 270px;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+}
+
+.team-card .employee-photo img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.team-card .employee-body {
+  padding: 30px 0;
+}
+
+.employee-body__name {
+  color: var(--v-darkGrey);
+  text-transform: capitalize;
+}
+
+.employee-body__position {
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--v-lightGrey);
+}
+
+/******** FILTER *********/
+.filter {
+  background-color: var(--v-white);
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+
+.filter .inner-flex {
+  justify-content: center;
+}
+
+.filter .btn {
+  font-weight: 500;
+  color: var(--v-darkGrey);
+  background: var(--v-current);
+  padding: 6px 22px;
+  outline: none;
+
+  margin-left: 8px;
+}
+
+.filter .btn:first-child {
+  margin-left: 0;
+}
+
+.filter .btn:hover,
+.filter .btn:focus,
+.filter .btn:active {
+  color: var(--v-white);
+  background-color: var(--v-blue);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/******** PORTFOLIO *********/
+.project {
+  background-color: var(--v-white);
+  padding-bottom: 64px;
+}
+
+.project-card {
+  width: 370px;
+  margin-bottom: 30px !important;
+  border: 1px solid var(--v-current-color-light);
+}
+
+.project-card .project-body {
+  padding: 20px 24px;
+  text-align: left;
+}
+
+.project-card .project-body .project-body__name {
+  color: var(--v-darkGrey);
+}
+
+.project-card .project-body .project-body__description {
+  color: var(--v-lightGrey);
+}
+
+/******** FOOTER *********/
+.footer {
+  padding: 60px 0;
+  background: var(--v-grey);
+}
+
+.footer .navbar-brand span {
+  color: var(--v-white);
+}
+
+.footer .contact-list {
+  list-style: none;
+  padding-top: 20px;
+}
+
+.footer .contact-list .nav-item {
+  padding-bottom: 9px;
+}
+
+.footer .contact-list .nav-item .nav-link,
+.footer .contact-list .nav-item .mapAdres {
+  color: var(--v-white);
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer .contact-list .nav-item:last-child {
+  padding-bottom: 0;
+}
+
+.footer .contact-list .nav-item:nth-child(2) .nav-link,
+.footer .contact-list .nav-item:last-child .nav-link {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer .contact-list .nav-item .nav-link:hover {
+  color: var(--v-blue);
+}
